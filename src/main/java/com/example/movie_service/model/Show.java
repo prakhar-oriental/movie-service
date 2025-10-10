@@ -11,18 +11,19 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
+@Table(name = "shows")
 public class Show {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long movieId;
-    private Long theaterId;
-    private LocalDateTime startTime;
-    private LocalDateTime endTime;
-    @ManyToOne
-    @JoinColumn(name = "movieId")
-    private  Movie movie;
+    private LocalDateTime showTime;
+
+    private double ticketPrice;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "movie_id")
+    private Movie movie;
 
 
 }

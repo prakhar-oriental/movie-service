@@ -1,4 +1,4 @@
-package com.example.movie_service.model;
+package com.example.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -21,7 +21,6 @@ public class Movie {
     private String language;
     private int duration;
 
-    @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Show> shows;
+
 }
 

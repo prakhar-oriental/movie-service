@@ -1,10 +1,10 @@
-package com.example.movie_service.service;
+package com.example.service;
 
 
-import com.example.movie_service.model.Movie;
-import com.example.movie_service.model.Show;
-import com.example.movie_service.repository.MovieRepository;
-import com.example.movie_service.repository.ShowRepository;
+import com.example.model.Movie;
+import com.example.model.Show;
+import com.example.repository.MovieRepository;
+import com.example.repository.ShowRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

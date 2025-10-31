@@ -1,9 +1,10 @@
-package com.example.movie_service.model;
+package com.example.model;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Entity
 @Data
@@ -21,9 +22,9 @@ public class Show {
 
     private double ticketPrice;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "movie_id")
-    private Movie movie;
 
+    private Long movieId;
+    private Long availableSeats;
+    private Long theaterId;
 
 }

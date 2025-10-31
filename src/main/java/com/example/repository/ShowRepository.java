@@ -1,6 +1,6 @@
-package com.example.movie_service.repository;
+package com.example.repository;
 
-import com.example.movie_service.model.Show;
+import com.example.model.Show;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
